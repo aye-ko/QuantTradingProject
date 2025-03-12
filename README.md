@@ -1,30 +1,48 @@
-# Quantitative Trading Data Pull
+Quantitative Trading Data Pull
 
-This project **fetches stock and cryptocurrency data** from multiple APIs and organizes it in a **Pandas DataFrame** for easy analysis and visualization. It supports fetching **real-time and historical data** from:
+This project fetches real-time and historical stock and cryptocurrency data from multiple sources and organizes it into tables and charts for easy analysis. It helps me practice Python, APIs, and data visualization while learning about financial markets.
 
-**Alpha Vantage**  
-**Finnhub**  
-**Polygon.io**  
-**Tiingo**  
+Features
+- Fetches stock prices from multiple sources
+- Organizes data into easy-to-read tables and charts
+- Uses caching to speed up searches
+- Avoids sending too many requests with rate limiting
+- Simple graphical interface for searching stocks
 
-**Key Features:**
-- Fetches **real-time** and **historical** market data
-- Organizes data into a **Pandas DataFrame**
-- Supports **multiple timeframes** (minutes, hours, days, weeks, months, years)
-- Built with **Python, Requests, Pandas, and dotenv**
+How to Install and Run
 
----
+1. Download the Project
+   git clone https://github.com/aye-ko/QuantTradingProject
+   cd QuantTradingProject
 
-## Installation
+2. Set Up a Virtual Environment
+   python -m venv env
 
-### **Clone the repository**
-If you're using **GitHub**, run:
+   - Mac/Linux: source env/bin/activate  
+   - Windows: env\Scripts\activate  
 
-```sh
-git clone 
-cd 
-python -m venv env
-source env/bin/activate  # On Mac/Linux
-env\Scripts\activate  # On Windows
-pip install -r requirements.txt
+3. Install Required Packages
+   pip install -r requirements.txt
 
+How It Works
+
+1. Enter a stock symbol (e.g., AAPL)
+2. The program checks memory to see if data is already available
+3. If needed, it fetches data from stock websites
+4. Data is organized and displayed in a graph
+
+Run the App
+
+   python main.py
+
+A window will open where you can:
+- Enter a stock name
+- Choose data sources
+- Click Fetch Data to view real-time prices
+
+Security
+- API keys are stored in a .env file
+- Missing keys will show a warning
+
+License
+This project is open-source under the MIT License.
